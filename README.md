@@ -32,6 +32,7 @@ yarn
 ```
 
 ## Auteurs
+
 - **Aghiles MEDANE** _alias_ [@aghiles-medane](https://github.com/)
 - **Emilia MAZARI** _alias_ [@Emilia-mazari](https://github.com/)
 - **Grégoire LICHOU** _alias_ [@glichou](https://github.com/)
