@@ -20,7 +20,7 @@ Afin de faire fonctionner notre application sur votre machine, vous devez avoir 
 ## Auteurs
 * **Aghiles MEDANE** _alias_ [@aghiles-medane](https://github.com/)
 * **Emilia MAZARI** _alias_ [@Emilia-mazari](https://github.com/)
-* **Grégoire LICHOU ** _alias_[@glichou] 
+* **Grégoire LICHOU** _alias_[@glichou](https://github.com/)
 
 
 
