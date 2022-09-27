@@ -1,27 +1,39 @@
 # MyEDT
 
-Le but de cet Application  consiste à mettre en place un tableau de bord qui permets de visualiser en temps réel le planning scolaire d'une filière à l'université d'Evry val d'essonne.. 
-## Pour commencer
+Ce projet à pour but d'extraire les données de l'EDT, le site d'emploi du temps de l'université d'Évry Val d'Essonne, afin de les structurer et les stocker dans une base de données. Nous prevoyons, par la suite, la mise en place d'une API facilitant la réutilisation de ces informations.
 
-Afin de faire fonctionner notre application sur votre machine, vous devez avoir le matériel ci-dessus.
+Ce projet sera prochainement utilisé pour la réalisation d'un planning scolaire.
 
-### MATÉRIEL
-* [https://nodejs.org](https://nodejs.org/ - Node.js - Serveur) 
+## Prérequis
 
-* [www.mysql.com/fr/](http://mysql.com/fr/) - MySQL et MySQL Workbench ( base de données)
+Pour faire fonctionner ce projet, vous aurez besoins d'installer les logiciels suivants :
 
-### Installation
+* [Node.js](https://nodejs.org/) - Serveur
+* [MySQL](http://mysql.com/fr/) - Base de données
+* [MySQL Workbench](https://www.mysql.com/fr/products/workbench/) - Admistration base de données
 
--Importer le projet sur votre machine : 
--Sur github , vous cliquez sur Code -> Download Zip
+## Installation
 
-## Démarrage
+Clonner le projet
+
+```bash
+git clone https://github.com/glichou/MyEDTScrapper.git
+```
+Se déplacer dans le dossier
+
+```bash
+cd MyEDTScrapper
+```
+
+Installer les dépendances
+
+```bash
+yarn
+```
 
 ## Auteurs
-* **Aghiles MEDANE** _alias_ [@aghiles-medane](https://github.com/)
-* **Emilia MAZARI** _alias_ [@Emilia-mazari](https://github.com/)
-* **Grégoire LICHOU** _alias_[@glichou](https://github.com/)
+- **Aghiles MEDANE** _alias_ [@aghiles-medane](https://github.com/)
+- **Emilia MAZARI** _alias_ [@Emilia-mazari](https://github.com/)
+- **Grégoire LICHOU** _alias_ [@glichou](https://github.com/)
 
-
-
-Lisez la liste des [contributeurs] pour voir qui à aidé au projet !
+Vous pouvez consulter la liste des contributeurs ayant participés à la réalisation du projet [ici](https://github.com/glichou/MyEDTScrapper/graphs/contributors) !
