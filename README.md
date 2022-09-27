@@ -6,22 +6,20 @@ Ce projet sera prochainement utilisé pour la réalisation d'un planning scolair
 
 ## Prérequis
 
-Afin de faire fonctionner notre application sur votre machine, vous devez avoir le matériel ci-dessus.
-
-### Architecture
+Pour faire fonctionner ce projet, vous aurez besoins d'installer les logiciels suivants :
 
 * [Node.js](https://nodejs.org/) - Serveur
 * [MySQL](http://mysql.com/fr/) - Base de données
-* [MySQL Workbench](https://www.mysql.com/fr/products/workbench/) - Admiistration base de données
+* [MySQL Workbench](https://www.mysql.com/fr/products/workbench/) - Admistration base de données
 
-### Installation
+## Installation
 
 Clonner le projet
 
 ```bash
 git clone https://github.com/glichou/MyEDTScrapper.git
 ```
-Se déplacer dans le fichier
+Se déplacer dans le dossier
 
 ```bash
 cd MyEDTScrapper
@@ -38,4 +36,4 @@ yarn
 - **Emilia MAZARI** _alias_ [@Emilia-mazari](https://github.com/)
 - **Grégoire LICHOU** _alias_ [@glichou](https://github.com/)
 
-Vous pouvez consulter la liste des contributeurs ayant participé à la réalisation du projet [ici](https://github.com/glichou/MyEDTScrapper/graphs/contributors) !
+Vous pouvez consulter la liste des contributeurs ayant participés à la réalisation du projet [ici](https://github.com/glichou/MyEDTScrapper/graphs/contributors) !
