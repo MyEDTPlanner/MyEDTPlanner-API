@@ -10,6 +10,7 @@ Pour faire fonctionner ce projet, vous aurez besoins d'installer les logiciels s
 
 * [Node.js](https://nodejs.org/) - Serveur
 * [MySQL](http://mysql.com/fr/) - Base de données
+* [MySQL Workbench](https://www.mysql.com/fr/products/workbench/) - Admistration base de données
 
 ## Installation
 
