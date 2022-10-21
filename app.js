@@ -1,12 +1,14 @@
 
 const express = require('express');
 const app = express();
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
 const connectToDatabase = require('./utils/connectToDatabase');
-console.log(process.env);
+
+dotenv.config();
 
 const indexRouter = require('./routes/index');
 const eventRouter = require('./routes/event');
+const port = process.env.PORT || 2000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -24,6 +26,9 @@ app.get('*', (req, res) => {
 
 connectToDatabase().then(() => {
     console.info('[Starting] - Connected to database');
+    app.listen(port, () => {
+        console.log(`Example app listening on port ${port}`)
+    });
 });
 
 module.exports = app;
