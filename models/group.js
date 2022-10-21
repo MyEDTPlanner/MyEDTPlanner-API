@@ -9,4 +9,4 @@ const groupSchema = new mongoose.Schema({
         type: String,
     },
 });
-module.exports = mongoose.model('groups', groupSchema);
+module.exports = mongoose.model('Group', groupSchema);
