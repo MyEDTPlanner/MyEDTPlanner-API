@@ -1,8 +1,8 @@
 ---
-name: ":bug: Bug report"
+name: "&#x1F41B; Bug report"
 about: Create a report to help us improve
-title: ":bug: "
-labels: ":bug: Bug"
+title: "&#x1F41B; "
+labels: "&#x1F41B; Bug"
 assignees: ''
 ---
 **Your name**

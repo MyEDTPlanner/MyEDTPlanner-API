@@ -1,8 +1,8 @@
 ---
-name: Feature request
+name: "&#x2728; Feature request"
 about: Suggest an idea for this project
-title: ''
-labels: ':sparkles: Enhancement'
+title: '&#x2728; '
+labels: '&#x2728; Enhancement'
 assignees: ''
 
 ---
