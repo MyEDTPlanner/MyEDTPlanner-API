@@ -31,6 +31,12 @@ Installer les dépendances
 yarn
 ```
 
+Lancer le projet
+
+```bash
+node app.js
+```
+
 ## Auteurs
 
 - **Aghiles MEDANE** _alias_ [@aghiles-medane](https://github.com/)
@@ -38,5 +44,3 @@ yarn
 - **Grégoire LICHOU** _alias_ [@glichou](https://github.com/)
 
 Vous pouvez consulter la liste des contributeurs ayant participés à la réalisation du projet [ici](https://github.com/glichou/MyEDTScrapper/graphs/contributors) !
-
-test
