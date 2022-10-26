@@ -1,8 +1,8 @@
 ---
-name: "&#x1F41B; Bug report"
+name: "\u0001F41B Bug report"
 about: Create a report to help us improve
-title: "&#x1F41B; "
-labels: "&#x1F41B; Bug"
+title: "\u0001F41B "
+labels: "\u0001F41B Bug"
 assignees: ''
 ---
 **Your name**
