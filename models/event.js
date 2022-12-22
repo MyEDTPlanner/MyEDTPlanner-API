@@ -22,7 +22,7 @@ const EventSchema = new mongoose.Schema({
         type: Array,
         default: [String],
     },
-    attendee: {
+    attendees: {
         type: Array,
         default: [String],
     },
@@ -35,6 +35,12 @@ const EventSchema = new mongoose.Schema({
     },
     presential: {
         type: Boolean
-    }
+    },
+    code: {
+        type: String
+    },
+    uuid: {
+        type: String
+    },
 });
 module.exports = mongoose.model('Event', EventSchema);

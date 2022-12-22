@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 const groupSchema = new mongoose.Schema({
-    idgr: {
+    code: {
         type: String,
         required: true
     },
-    code: {
+    libelle: {
         type: String,
     },
 });
