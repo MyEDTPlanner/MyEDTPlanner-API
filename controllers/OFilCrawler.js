@@ -1,3 +1,4 @@
+const Group = require('../models/group');
 const axios = require("axios");
 const jws = require("jws");
 
@@ -54,7 +55,12 @@ class OFilCrawler {
             });
 
             if(response.status == 200 && response.data.state == "ok"){
-                let groups = [...new Set(response.data.response)]
+                let groups = [...new Set(response.data.response)].map(group => {
+                    return new Group({
+                        code: group,
+                        name: "Emilia",
+                    });
+                });
                 return groups;
             }
         } catch (e) {

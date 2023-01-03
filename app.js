@@ -26,8 +26,8 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/event', eventRouter);
 app.use('/group', groupRouter);
-app.use('/refresh-events', refreshEventsRouter);
-app.use('/refresh-groups', refreshGroupsRouter);
+app.use('/refresh/events', refreshEventsRouter);
+app.use('/refresh/groups', refreshGroupsRouter);
 
 app.get('*', (req, res) => {
     return res.send({
