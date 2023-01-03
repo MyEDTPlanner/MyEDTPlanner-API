@@ -1,4 +1,4 @@
-# MyEDT
+# MyEDTPlanner
 
 Ce projet à pour but d'extraire les données de l'EDT, le site d'emploi du temps de l'université d'Évry Val d'Essonne, afin de les structurer et les stocker dans une base de données. Nous prevoyons, par la suite, la mise en place d'une API facilitant la réutilisation de ces informations.
 
@@ -29,6 +29,12 @@ Installer les dépendances
 
 ```bash
 yarn
+```
+
+Lancer le projet
+
+```bash
+node app.js
 ```
 
 ## Auteurs
