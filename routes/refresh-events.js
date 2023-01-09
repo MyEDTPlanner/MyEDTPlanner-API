@@ -1,9 +1,8 @@
 
 const express = require('express');
 const router = express.Router();
-const { readFileSync } = require('fs');
-
 const EDTCrawler = require('../controllers/EDTCrawler');
+const event = require('../models/event');
 
 // Retrieve events
 router.get('/:_group', async (req, res) => {
@@ -14,10 +13,20 @@ router.get('/:_group', async (req, res) => {
 
         try {
             await parser.init();
+            let events= await parser.getFinalCoursesList();
+             event.remove();
+             event.insertMany(events,{ ordered: false }, (err, docs) => {
+                if (err) {
+                    console.log(err);
+                }
+            });
+    
             res.send({
-                result: parser.getFinalCoursesList(),
+                result: events,
                 success: true,
             });
+            
+            
         } catch (e) {
             res.status(400).json({ error: e.message });
         }
