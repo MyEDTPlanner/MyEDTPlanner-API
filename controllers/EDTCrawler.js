@@ -83,7 +83,6 @@ class EDTCrawler {
             
             for (const event of Object.values(response)) {
                 if(event.type === 'VEVENT'){
-                    console.log(event);
                     this._icsEvents.push(new ICSEventParser(event).parse());
                 }
             }

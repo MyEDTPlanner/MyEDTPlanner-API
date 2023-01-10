@@ -1,5 +1,3 @@
-const Event = require('../models/event');
-const Teacher = require('../models/teacher');
 const generateEventUuid = require('../utils/generateEventUuid');
 
 class ICSEventParser {
@@ -14,8 +12,8 @@ class ICSEventParser {
         this.title;
         this.type;
         this.description;
+        this.locations = [];
         this.attendees = [];
-        this.locations;
         this.groups = [];
         this.done;
         this.presential;
@@ -28,7 +26,6 @@ class ICSEventParser {
         this.extractEndDate();
         this.extractDescription();
         this.extractAttendees();
-        console.log(`== PARSE ==`);
         this.extractGroups();
         this.extractIsDone();
         this.extractIsPresential();
@@ -37,8 +34,7 @@ class ICSEventParser {
         this.extractType();
         this.extractCode();
 
-        console.log(`== INSERTION ${this.title} ==`);
-        let event =  new Event({
+        let event =  {
             start: this.start.toISOString(),
             end: this.end.toISOString(),
             title: this.title,
@@ -51,9 +47,7 @@ class ICSEventParser {
             presential: this.presential,
             code: this.code,
             uuid: generateEventUuid(this.start.toISOString(), this.end.toISOString())
-        });
-        //console.log(event);
-        console.log(`== FIN INSERTON ${this.title} ==`);
+        };
         return event;
     }
     extractType(){
@@ -100,9 +94,12 @@ class ICSEventParser {
     }
     extractAttendees(){
         let list = this._descInfos["PROF"] ? this._descInfos["PROF"].split(" / ") : [];
-        console.log(list);
-        this.attendees = list.map((lastname) => new Teacher({lastname}));
-        console.log(this.attendees);
+        this.attendees = list.map((lastname) => {
+            return {
+                firstname: "",
+                lastname: lastname
+            };
+        });
     }
     extractGroups(){
 

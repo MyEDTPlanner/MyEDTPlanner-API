@@ -5,7 +5,7 @@ const groupSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    libelle: {
+    name: {
         type: String,
     },
 });

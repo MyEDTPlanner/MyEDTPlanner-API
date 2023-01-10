@@ -1,5 +1,3 @@
-const Event = require('../models/event');
-const Teacher = require('../models/teacher');
 const moment = require('moment');
 const generateEventUuid = require('../utils/generateEventUuid');
 
@@ -36,7 +34,7 @@ class WebEventParser {
         this.extractType();
         this.extractCode();
 
-        return new Event({
+        return {
             start: this.start.toISOString(),
             end: this.end.toISOString(),
             title: this.title,
@@ -49,7 +47,7 @@ class WebEventParser {
             presential:this.presential,
             code:this.code,
             uuid: generateEventUuid(this.start.toISOString(), this.end.toISOString())
-        });
+        };
     }
     extractType(){
         let type = this._event["type"];
@@ -97,10 +95,10 @@ class WebEventParser {
         this.attendees = list.reduce((acc, ligne) => {
             let match = ligne.match(WebEventParser.REGEX_PROF);
             if(match){
-                acc.push(new Teacher ({
+                acc.push({
                     firstname: match.groups.prenom,
                     lastname: match.groups.nom
-                }));
+                });
             }
             return acc;
         }, []);
