@@ -9,8 +9,7 @@ Ce projet sera prochainement utilisé pour la réalisation d'un planning scolair
 Pour faire fonctionner ce projet, vous aurez besoins d'installer les logiciels suivants :
 
 * [Node.js](https://nodejs.org/) - Serveur
-* [MySQL](http://mysql.com/fr/) - Base de données
-* [MySQL Workbench](https://www.mysql.com/fr/products/workbench/) - Admistration base de données
+* [MongoDB](https://www.mongodb.com/download-center/community/releases) - Base de données
 
 ## Installation
 
@@ -28,7 +27,7 @@ cd MyEDTScrapper
 Installer les dépendances
 
 ```bash
-yarn
+npm install
 ```
 
 Lancer le projet
