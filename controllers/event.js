@@ -13,9 +13,9 @@ const getEvents = async (query) => {
     }
 
     try {
-        const events = await Event.find(search)
+        const result = await Event.find(search)
 
-        response = { ...response, events }
+        response = { ...response, result }
     } catch (error) {
         response = {
             ...response,
@@ -53,7 +53,7 @@ const createEvent = async (eventData) => {
     try {
         const savedEvent = await event.save();
 
-        response = { ...response, event: savedEvent };
+        response = { ...response, result: savedEvent };
     } catch (error) {
         response = {
             ...response,
@@ -80,7 +80,7 @@ const updateEvent = async (_id, eventData) => {
             { new: true },
         )
 
-        response = { ...response, event: savedEvent }
+        response = { ...response, result: savedEvent }
     } catch (error) {
         response = {
             ...response,
@@ -102,7 +102,7 @@ const deleteEvent = async (_id) => {
     try {
         const deletedEvent = await Event.findByIdAndDelete(_id)
 
-        response = { ...response, event: deletedEvent }
+        response = { ...response, result: deletedEvent }
     } catch (error) {
         response = {
             ...response,

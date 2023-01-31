@@ -58,7 +58,7 @@ class OFilCrawler {
                 let groups = [...new Set(response.data.response)].map(group => {
                     return new Group({
                         code: group,
-                        name: "",
+                        name: group,
                     });
                 });
                 return groups;

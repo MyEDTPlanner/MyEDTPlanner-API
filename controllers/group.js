@@ -13,9 +13,9 @@ const getGroups = async (query) => {
     }
 
     try {
-        const groups = await Group.find(search)
+        const result = await Group.find(search)
 
-        response = { ...response, groups }
+        response = { ...response, result }
     } catch (error) {
         response = {
             ...response,
@@ -53,7 +53,7 @@ const createGroup = async (groupData) => {
     try {
         const savedGroup = await group.save();
 
-        response = { ...response, group: savedGroup };
+        response = { ...response, result: savedGroup };
     } catch (error) {
         response = {
             ...response,
@@ -80,7 +80,7 @@ const updateGroup = async (_id, groupData) => {
             { new: true },
         )
 
-        response = { ...response, group: savedGroup }
+        response = { ...response, result: savedGroup }
     } catch (error) {
         response = {
             ...response,
@@ -102,7 +102,7 @@ const deleteGroup = async (_id) => {
     try {
         const deletedGroup = await Group.findByIdAndDelete(_id)
 
-        response = { ...response, group: deletedGroup }
+        response = { ...response, result: deletedGroup }
     } catch (error) {
         response = {
             ...response,
