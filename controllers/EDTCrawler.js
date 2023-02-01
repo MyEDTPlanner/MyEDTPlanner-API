@@ -83,7 +83,7 @@ class EDTCrawler {
             
             for (const event of Object.values(response)) {
                 if(event.type === 'VEVENT'){
-                    this._icsEvents.push(new ICSEventParser(event).parse());
+                    this._icsEvents.push(new ICSEventParser(event).parse(), this._code);
                 }
             }
             console.log("2) Fichier ICS récupéré.");
@@ -144,7 +144,7 @@ class EDTCrawler {
                     $(rangee).each((i, element) => {
                         ligne[entetes[i]] = $(element).text();
                     });
-                    donnees = donnees.concat(new WebEventParser(ligne, module).parse());
+                    donnees = donnees.concat(new WebEventParser(ligne, module, this._code).parse());
                 }
             });
             console.log(`Cours du module ${module} récupérés.`);

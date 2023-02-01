@@ -4,7 +4,7 @@ class ICSEventParser {
     static REGEX_SALLE = / (?=RFC|IBGBI|PEL|AX|BX|CX|1CY|IDF|MAU|IUT)/;
     static REGEX_DESCRIPTION = /(?<key>[^:]+(?= : )) : (?<value>.+)/;
 
-    constructor(event){
+    constructor(event, group){
         this._event = event;
         this._descInfos = {};
         this.start;
@@ -15,9 +15,11 @@ class ICSEventParser {
         this.locations = [];
         this.attendees = [];
         this.groups = [];
+        this.group = group;
         this.done;
         this.presential;
         this.code;
+        this.group = group;
     }
     parse(){
         
@@ -37,6 +39,7 @@ class ICSEventParser {
         let event =  {
             start: this.start.toISOString(),
             end: this.end.toISOString(),
+            group: this.group,
             title: this.title,
             type: this.type,
             description: this.description,

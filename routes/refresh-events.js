@@ -15,7 +15,7 @@ router.get('/:_group', async (req, res) => {
             await parser.init();
             let events = await parser.getFinalCoursesList();
             
-            event.remove();
+            event.remove({});
             event.insertMany(events,{ ordered: false }, (err, docs) => {
                 if (err) {
                     console.log(err);
@@ -23,7 +23,10 @@ router.get('/:_group', async (req, res) => {
             });
     
             res.send({
-                result: `${events.length} events retrieved for group ${_group}`,
+                result: {
+                    "group": _group,
+                    "nbEventsRetrieved": events.length
+                },
                 success: true,
             });
             
