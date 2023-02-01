@@ -1098,9 +1098,9 @@
     "yallist" "^4.0.0"
 
 "luxon@^1.21.3":
-  "integrity" "sha512-TfTiyvZhwBYM/7QdAVDh+7dBTBA29v4ik0Ce9zda3Mnf8on1S5KJI8P2jKFZ8+5C0jhmr0KwJEO/Wdpm0VeWJQ=="
-  "resolved" "https://registry.npmjs.org/luxon/-/luxon-1.28.0.tgz"
-  "version" "1.28.0"
+  "integrity" "sha512-gYHAa180mKrNIUJCbwpmD0aTu9kV0dREDrwNnuyFAsO1Wt0EVYSZelPnJlbj9HplzXX/YWXHFTL45kvZ53M0pw=="
+  "resolved" "https://registry.npmjs.org/luxon/-/luxon-1.28.1.tgz"
+  "version" "1.28.1"
 
 "map-o@^2.0.1":
   "integrity" "sha512-BxazE81fVByHWasyXhqKeo2m7bFKYu+ZbEfiuexMOnklXW+tzDvnlTi/JaklEeuuwqcqJzPaf9q+TWptSGXeLg=="

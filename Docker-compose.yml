@@ -1,0 +1,42 @@
+version: '3'
+services:
+  db:
+    image: mongo:4.2
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks: 
+      - myedtplanner_network
+  web:
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - "2000:2000"
+    environment:
+      PORT: 2000
+      USER_ID: "20195790"
+      USER_PASSWD : "EMY@2019mazari"
+      NODE_ENV: development
+      MONGO_URI: mongodb://db:27017/EDTScrapper?retryWrites=true&w=majority
+    networks: 
+      - myedtplanner_network
+  frontend:
+    build: 
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+      REACT_APP_API_URL: "http://localhost:2000"
+
+    networks: 
+      - myedtplanner_network
+volumes:
+  mongo-data:
+networks:
+  myedtplanner_network:
+
+#docker-compose build --no-cache
