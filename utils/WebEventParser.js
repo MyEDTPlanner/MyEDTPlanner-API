@@ -6,7 +6,7 @@ class WebEventParser {
     static REGEX_UEC = /-(?<ec>(?:EC|(?:UE(?:C|T|D)))[0-9]{2,3})_/;
     static REGEX_PROF = "^(?<prenom>(?:[A-Z][a-z]*)(?:[ \-]+[A-Z][a-z]*)?) +(?<nom>(?:[A-Z]+)(?:[ \-]+[A-Z]+)*)$";
 
-    constructor(event, module){
+    constructor(event, module, group){
         this._event = event;
         this._module = module;
         this.start;
@@ -20,6 +20,7 @@ class WebEventParser {
         this.done;
         this.presential;
         this.code;
+        this.group = group;
     }
     parse(){
         this.extractStartDate();
@@ -38,6 +39,7 @@ class WebEventParser {
             start: this.start.toISOString(),
             end: this.end.toISOString(),
             title: this.title,
+            group: this.group,
             type: this.type,
             description: this.description,
             attendees: this.attendees,

@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     let crawler = new OFilCrawler();
     try {
         let groups = await crawler.getGroups();
-        group.remove();
+        group.remove({});
         group.insertMany(groups, { ordered: false }, (err, docs) => {
             if (err) {
                 console.log(err);

@@ -12,6 +12,10 @@ const getEvents = async (query) => {
         search._id = query._id
     }
 
+    if (query.group !== undefined) {
+        search.group = query.group
+    }
+
     try {
         const result = await Event.find(search)
 
