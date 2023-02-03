@@ -83,7 +83,7 @@ class EDTCrawler {
             
             for (const event of Object.values(response)) {
                 if(event.type === 'VEVENT'){
-                    this._icsEvents.push(new ICSEventParser(event).parse(), this._code);
+                    this._icsEvents.push(new ICSEventParser(event, this._code).parse());
                 }
             }
             console.log("2) Fichier ICS récupéré.");

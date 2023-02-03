@@ -15,7 +15,6 @@ class ICSEventParser {
         this.locations = [];
         this.attendees = [];
         this.groups = [];
-        this.group = group;
         this.done;
         this.presential;
         this.code;

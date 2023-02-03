@@ -22,6 +22,7 @@ class WebEventParser {
         this.code;
         this.group = group;
     }
+    
     parse(){
         this.extractStartDate();
         this.extractEndDate();
