@@ -11,17 +11,36 @@ Pour faire fonctionner ce projet, vous aurez besoins d'installer les logiciels s
 * [Node.js](https://nodejs.org/) - Serveur
 * [MongoDB](https://www.mongodb.com/download-center/community/releases) - Base de données
 
+## Configuration
+
+Pour faire fonctionner ce projet, vous aller devoir remplir les variables d'environnements dans un fichier .env (utilisez le fichier example.env comme base et renommer le en .env).
+
+Variables d'environnements :
+
+
+
+|    Nom      |            Description de valeur             |
+|-------------|----------------------------------------------|
+| MONGO_URI   | Url de connexion vers MongoDB                |
+| PORT        | Le numéro du port de l'api                   |
+| USER_ID     |  Votre numéro d'étudiant à 8 chiffres        |
+| USER_PASSWD |  Votre mot de passe de votre compte étudiant |
+
+
+
+
+
 ## Installation
 
 Clonner le projet
 
 ```bash
-git clone https://github.com/glichou/MyEDTScrapper.git
+git clone git@github.com:MyEDTPlanner/MyEDTPlanner-API.git Api
 ```
 Se déplacer dans le dossier
 
 ```bash
-cd MyEDTScrapper
+cd Api
 ```
 
 Installer les dépendances
@@ -29,6 +48,8 @@ Installer les dépendances
 ```bash
 npm install
 ```
+
+N'ouliez pas de remplir le fichier ".env" comme indiqué précédemment. 
 
 Lancer le projet
 
