@@ -30,6 +30,9 @@ const eventSchema = new mongoose.Schema({
         type: Array,
         default: [String],
     },
+    universityPresence: {
+        type: Boolean
+    },
     groups: {
         type: Array,
         default: [String]
