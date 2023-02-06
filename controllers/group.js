@@ -32,8 +32,6 @@ const createGroup = async (groupData) => {
         success: true,
     };
 
-    // TODO: Voir les acccès
-
     const { start, end, title, type, description, locations, attendee, groups, done, presential } = groupData;
 
     const group = new Group({

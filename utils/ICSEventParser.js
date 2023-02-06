@@ -19,6 +19,7 @@ class ICSEventParser {
         this.presential;
         this.code;
         this.group = group;
+        this.universityPresence;
     }
     parse(){
         
@@ -34,6 +35,7 @@ class ICSEventParser {
         this.extractTitle();
         this.extractType();
         this.extractCode();
+        this.extractUniversityPresence();
 
         let event =  {
             start: this.start.toISOString(),
@@ -48,6 +50,7 @@ class ICSEventParser {
             done: this.done,
             presential: this.presential,
             code: this.code,
+            universityPresence: this.universityPresence,
             uuid: generateEventUuid(this.start.toISOString(), this.end.toISOString())
         };
         return event;
@@ -71,6 +74,17 @@ class ICSEventParser {
                 this.type = "Examen";
             } else {
                 this.type = "Autre";
+            }
+        }
+    }
+    extractUniversityPresence(){
+        this.universityPresence = false;
+
+        if(this.type == "Autre" && this._descInfos["INTITULE"]){
+            // Mettre en majuscule et enlèver les accents
+            const titre = this._descInfos["INTITULE"].normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            if(titre.includes("presence") && titre.includes("universit")){
+                this.universityPresence = true;
             }
         }
     }

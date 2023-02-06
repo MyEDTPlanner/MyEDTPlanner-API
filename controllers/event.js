@@ -38,7 +38,7 @@ const createEvent = async (eventData) => {
 
     // TODO: Voir les acccès
 
-    const { start, end, title, type, description, locations, attendee, groups, done, presential } = eventData;
+    const { start, end, title, type, description, locations, attendee, groups, done, presential, universityPresence } = eventData;
 
     const event = new Event({
         start,
@@ -100,8 +100,6 @@ const deleteEvent = async (_id) => {
     let response = {
         success: true,
     }
-
-    // TODO: Voir les acccès
 
     try {
         const deletedEvent = await Event.findByIdAndDelete(_id)
